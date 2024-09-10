@@ -1,0 +1,103 @@
+        /* General styling for elements */
+        * {
+            color: white;
+            font-family: sans-serif;
+            transition: 0.2s ease-in-out;
+            user-select: none; /* Prevent text selection */
+        }
+
+        /* Center alignment utility class */
+        .algin {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Body styles */
+        body {
+            background-color: #252A34; /* Dark background */
+            margin: 0;
+            padding: 0;
+            width: 100vw; /* Full viewport width */
+            text-align: center;
+            padding-top: 5vh; /* Adds space at the top */
+        }
+
+        /* Turn indicator container styles */
+        .turn-container {
+            width: 170px;
+            height: 80px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            position: relative;
+        }
+
+        /* Title text inside the turn-container */
+        .turn-container h3 {
+            margin: 0;
+            grid-column-start: 1;
+            grid-column-end: 3; /* Span across both columns */
+        }
+
+        /* Box to display the current turn */
+        .turn-box {
+            border: 3px solid #000;
+            font-size: 1.6rem;
+            font-weight: 700;
+        }
+
+        /* Background for the turn indicator */
+        .bg {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 85px;
+            height: 40px;
+            background-color: #ff2e63;
+            z-index: -1;
+            transition: 0.2s ease-in-out; /* Smooth transition for movement */
+        }
+
+        /* Main grid (tic-tac-toe board) */
+        .main-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 columns */
+            grid-template-rows: repeat(3, 1fr); /* 3 rows */
+            height: 250px;
+            width: 250px;
+            margin: 30px auto; /* Center the grid */
+            border: 2px solid #000;
+        }
+
+        /* Individual grid boxes (cells) */
+        .box {
+            cursor: pointer;
+            font-size: 2rem;
+            font-weight: 700;
+            border: 2px solid #000;
+        }
+
+        /* Hover effect for grid boxes */
+        .box:hover {
+            background-color: #ff2e63;
+        }
+
+        /* Play again button styling */
+        #play-again {
+            background-color: #ff2e63;
+            padding: 10px 25px;
+            border: none;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            cursor: pointer;
+            display: none; /* Hidden initially */
+        }
+
+        /* Hover effect for the play again button */
+        #play-again:hover {
+            padding: 10px 40px;
+            background-color: #08d9d6;
+            color: #000;
+        }
